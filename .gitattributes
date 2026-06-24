@@ -1,0 +1,13 @@
+# Normaliza los finales de línea a LF dentro del repositorio.
+# Importante en este proyecto: evita conflictos de fusión "fantasma" en index.html
+# cuando colaboran personas en Windows, macOS y Linux a la vez.
+* text=auto eol=lf
+
+# Archivos binarios (no aplicar normalización de texto).
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
