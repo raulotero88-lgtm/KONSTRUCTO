@@ -1,0 +1,36 @@
+# --- Backups de progreso del Konstructo (datos PERSONALES del localStorage) ---
+# La app exporta el progreso (claves quiz_*) a un .json. Son datos de cada persona: NO se suben.
+*construct*backup*.json
+*_backup_*.json
+
+# --- Sistema operativo ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*~
+
+# --- Editores / IDEs ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+
+# --- Copias sueltas y temporales (evitan confusión y conflictos) ---
+# Evita commitear duplicados del HTML; el historial de Git ya guarda todas las versiones.
+*.bak
+*.tmp
+*.log
+* copia*.html
+*(1).html
+
+# --- Node (solo lo usa la CI en la nube; aquí por si alguien lo ejecuta en local) ---
+node_modules/
+package.json
+package-lock.json
+.env
+.env.local

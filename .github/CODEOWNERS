@@ -1,0 +1,19 @@
+# CODEOWNERS — quién debe revisar y aprobar los Pull Requests
+#
+# El mantenedor del repositorio (NO la autora, que no gestiona Git) es el revisor obligatorio.
+# Para que esto sea OBLIGATORIO, activa en el Ruleset de `main`:
+#   "Require a pull request before merging" + "Require review from Code Owners".
+#
+# IMPORTANTE: el usuario aquí debe tener acceso de ESCRITURA al repo, o GitHub lo ignora.
+
+# Mantenedor: revisa TODO el código.
+*                       @raulotero88-lgtm
+
+# Explícito para la app y la configuración del repositorio.
+/index.html             @raulotero88-lgtm
+/.github/               @raulotero88-lgtm
+
+# --- Plan de contingencia (recomendado) ---
+# Si eres el único revisor, NINGÚN PR podrá fusionarse cuando no estés disponible.
+# Añade un segundo mantenedor de confianza (la profesora u otro alumno) descomentando:
+# *                     @raulotero88-lgtm @SEGUNDO-MANTENEDOR

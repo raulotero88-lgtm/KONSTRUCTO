@@ -1,0 +1,43 @@
+name: CI Konstructo
+
+# Se ejecuta en cada Pull Request hacia main y en cada push a main.
+# Actúa como "portero": si la app está rota, la PR se marca en rojo y no se puede fusionar
+# (siempre que en el Ruleset de main hayas marcado "Require status checks to pass" -> check "validar").
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  validar:                          # <-- este nombre es el "status check" obligatorio en el Ruleset
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el código
+        uses: actions/checkout@v4
+
+      - name: Preparar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 1) GATE CLAVE: sintaxis del JavaScript embebido.
+      #    htmlhint NO detecta errores de JS, así que esto es lo que de verdad evita la "pantalla en blanco"
+      #    por un SyntaxError (incluido el que se esconde en la línea gigante de DEFAULT_OBJECTIVES).
+      - name: Validar sintaxis del JavaScript
+        run: node check-js.js
+
+      # 2) Validación de HTML (etiquetas mal cerradas, atributos duplicados, etc.)
+      - name: Validar HTML con HTMLHint
+        run: npx --yes htmlhint "index.html"
+
+      # 3) Navegador headless: abre la app y falla si la consola tiene errores o #root queda vacío.
+      #    npm install playwright es IMPRESCINDIBLE para que check-console.js pueda hacer require('playwright').
+      - name: Instalar Playwright (Chromium)
+        run: |
+          npm init -y
+          npm install playwright
+          npx playwright install --with-deps chromium
+
+      - name: Arrancar la app y detectar errores de consola
+        run: node check-console.js
