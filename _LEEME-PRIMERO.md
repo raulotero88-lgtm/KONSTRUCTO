@@ -30,7 +30,7 @@ Antes de publicar, sustituye estos marcadores en los archivos indicados:
 | Marcador | Reemplázalo por | Archivos donde aparece |
 |---|---|---|
 | `raulotero88-lgtm` | Tu usuario de GitHub | `README.md`, `.github/CODEOWNERS`, comandos de abajo |
-| `el-konstructo` | El nombre que le des al repo | `README.md`, comandos de abajo |
+| `KONSTRUCTO` | El nombre que le des al repo | `README.md`, comandos de abajo |
 | `Vanesa` | El nombre real de la alumna autora | `README.md`, `CHANGELOG.md` |
 | `@SEGUNDO-MANTENEDOR` | (Opcional) un 2º revisor de confianza, o bórralo | `.github/CODEOWNERS` |
 
@@ -51,12 +51,12 @@ git commit -m "El Konstructo v1.8.10 — versión inicial de Vanesa + gobernanza
 git branch -M main
 
 # Privado (recomendado mientras trabajáis). Cambia --private por --public si quieres Pages gratis.
-gh repo create el-konstructo --private --source=. --remote=origin --push
+gh repo create KONSTRUCTO --private --source=. --remote=origin --push
 ```
 
 ### Vía B — web de GitHub + Git
 
-1. En GitHub: **+ → New repository** → nombre `el-konstructo` → **privado** → **NO** marques "Add a README"
+1. En GitHub: **+ → New repository** → nombre `KONSTRUCTO` → **privado** → **NO** marques "Add a README"
    (ya tenemos uno) → **Create repository**.
 2. En la terminal:
 
@@ -66,7 +66,7 @@ gh repo create el-konstructo --private --source=. --remote=origin --push
    git add .
    git commit -m "El Konstructo v1.8.10 — versión inicial de Vanesa + gobernanza del repo"
    git branch -M main
-   git remote add origin https://github.com/raulotero88-lgtm/el-konstructo.git
+   git remote add origin https://github.com/raulotero88-lgtm/KONSTRUCTO.git
    git push -u origin main
    ```
 
@@ -88,7 +88,7 @@ gh repo create el-konstructo --private --source=. --remote=origin --push
 4. **Activa la CI:** ya está en `.github/workflows/ci.yml`; correrá sola en el primer Pull Request.
    Luego añade el check `validar` como obligatorio en el Ruleset (*Add checks*).
 5. **(Opcional) Publica la app con GitHub Pages:** *Settings → Pages → Deploy from a branch → `main` →
-   `/ (root)`*. Servirá `index.html` en `https://raulotero88-lgtm.github.io/el-konstructo/`.
+   `/ (root)`*. Servirá `index.html` en `https://raulotero88-lgtm.github.io/KONSTRUCTO/`.
    ⚠️ Pages en repo **privado** requiere plan de pago; en **público** es gratis.
 
 ---

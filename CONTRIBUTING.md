@@ -41,10 +41,10 @@ Sirve para debatirla y **"reservar" la zona**. Espera un visto bueno antes de em
 Pulsa **Fork** (arriba a la derecha en la web del repo). Luego, en tu ordenador:
 
 ```bash
-git clone https://github.com/TU-USUARIO/el-konstructo.git
-cd el-konstructo
+git clone https://github.com/TU-USUARIO/KONSTRUCTO.git
+cd KONSTRUCTO
 # Registra el repo ORIGINAL como "upstream" para traerte sus novedades:
-git remote add upstream https://github.com/raulotero88-lgtm/el-konstructo.git
+git remote add upstream https://github.com/raulotero88-lgtm/KONSTRUCTO.git
 git remote -v        # debes ver "origin" (tu fork) y "upstream" (el original)
 ```
 

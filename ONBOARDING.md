@@ -33,8 +33,8 @@ git config --global user.email "tu-correo@del-master.com"   # el mismo de tu cue
 2. **Clona tu fork** y entra en la carpeta (o usa *Code → Open with GitHub Desktop*):
 
    ```bash
-   git clone https://github.com/TU-USUARIO/el-konstructo.git
-   cd el-konstructo
+   git clone https://github.com/TU-USUARIO/KONSTRUCTO.git
+   cd KONSTRUCTO
    ```
 
 3. **Abre la app**: doble clic en `index.html`, o ábrela con **Live Server** en VS Code.

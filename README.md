@@ -19,7 +19,7 @@ No necesita servidor ni instalación. Tres formas:
 1. **Doble clic** sobre `index.html` → se abre en el navegador (`file://...`). La más rápida.
 2. **Live Server (VS Code):** abre la carpeta en VS Code, instala la extensión *Live Server*, clic
    derecho sobre `index.html` → **Open with Live Server**. Se recarga sola al guardar; ideal si editas.
-3. **Versión publicada online:** 👉 **<https://raulotero88-lgtm.github.io/el-konstructo/>**
+3. **Versión publicada online:** 👉 **<https://raulotero88-lgtm.github.io/KONSTRUCTO/>**
 
 > Requiere conexión a internet la primera vez, porque React y React-DOM se descargan desde el CDN
 > (unpkg). Sin internet, la app no arranca.
